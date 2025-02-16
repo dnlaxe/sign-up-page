@@ -62,7 +62,7 @@ body {
     background: rgb(0, 0, 0, 0.5);
     font-size: 100px;
     width: 100%;
-    top: 25%;
+    top: 20%;
     text-align: center;
     display: flex;
     align-items: center;
@@ -146,7 +146,7 @@ p {
     font-size: 18px;
 }
 
-a {
+#log-in {
     text-decoration: none;
     color: #596D48;
     font-weight: 900;
@@ -160,5 +160,31 @@ input:focus {
 
 input:invalid {
     border-color:red;
+    outline: none;
+}
+
+input:focus:valid {
+    border-color: green;
+    outline: none;
+}
+
+
+.photo-blurb p a {
+    color: white;
+}
+
+#password-check {
+    margin-top: 5px;
+    color: red;
+    font-style: italic;
+}
+
+.error {
+    border-color:red !important;
+    outline: none;
+}
+
+.match {
+    border-color:green !important;
     outline: none;
 }
