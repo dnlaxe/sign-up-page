@@ -2,6 +2,7 @@ const password = document.getElementById('pwd');
 const confirmPassword = document.getElementById('confirm');
 const message = document.getElementById('password-check');
 const phone = document.getElementById('phone-number')
+const fadedLabel = document.querySelector('label[for="confirm"]')
 
 function checkPasswordsMatch() {
     if (password.value === confirmPassword.value && password.value != "") {
@@ -37,6 +38,17 @@ function formatPhoneNumber(number) {
     number.target.value = output;
 }
 
+function blockConfirm() {
+    if (password.value.trim() != "") {
+        confirmPassword.removeAttribute("disabled");
+        fadedLabel.style.opacity = 1;
+    } else {
+        confirmPassword.setAttribute("disabled", true);
+        fadedLabel.style.opacity = 0.5;
+    }
+}
+
 confirmPassword.addEventListener('input', checkPasswordsMatch);
 confirmPassword.addEventListener('blur', resetBorder);
 phone.addEventListener('input', formatPhoneNumber);
+password.addEventListener('input', blockConfirm)

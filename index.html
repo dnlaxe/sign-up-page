@@ -29,11 +29,11 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name">
+                        <input type="text" id="first-name" name="first-name" placeholder="">
                     </div>
                     <div class="form-group">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name">
+                        <input type="text" id="last-name" name="last-name" placeholder="">
                     </div>      
                 </div>
 
@@ -44,18 +44,18 @@
                     </div>
                     <div class="form-group">
                         <label for="phone-number">PHONE NUMBER</label>
-                        <input type="tel" id="phone-number" name="phone-number" pattern="010-[0-9]{4}-[0-9]{4}">
+                        <input type="tel" id="phone-number" name="phone-number" pattern="010-[0-9]{4}-[0-9]{4}" placeholder="010-XXXX-XXXX" maxlength="13">
                     </div>      
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="pwd">PASSWORD</label>
-                        <input type="password" id="pwd" name="pwd">
+                        <input type="password" id="pwd" name="pwd" placeholder="">
                     </div>
                     <div class="form-group">
-                        <label for="confirm">CONFIRM PASSWORD</label>
-                        <input type="text" id="confirm" name="confirm">
+                        <label for="confirm" style="opacity: 0.5;">CONFIRM PASSWORD</label>
+                        <input type="text" id="confirm" name="confirm" placeholder="" disabled>
                         <span id="password-check"></span>
                     </div>      
                 </div>
